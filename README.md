@@ -1,33 +1,35 @@
-# divaAutoBackup
+# DivaAutoBackup
 
-**NECESSARY DEPENDENCY PLEASE INSTALL!!!**
+Diva Auto Backup, DivaAB or DAB (hahah :|) is a cross-platform alternative executable for the game **Hatsune Miku: Project DIVA MegaMix+**.
 
-7-Zip needs to be installed for this to work!
-Directly download it from here if you don't have it:
-https://www.7-zip.org/a/7z2201-x64.exe
+It's purpose is to replace your original shortcut used to launch game to keep your save file backed up. Here's how it works:
 
-**What is this?**
+* When launched for the first time will show a setup window asking the user where their Steam instalation is and where they would like to keep their backups.
+  - *(on linux the steam path text box will be grayed out because the program calls the "steam" executable from PATH directly)*
+* After the user presses **Save**, the settings will be saved to the config file *config.yml* and the program will proceed with it's normal execution.
+* It will then use steam to launch the game using it's app_id, wait for the game process to start, and will then check if the game is still running every 1.5 seconds.
+* If it detects the game has been closed, a pop-up window will appear asking the user if they would like to backup their save file, if aggreed, the program will compress their save data into a timestamped .zip file and move it to the previously setup backup location. If declined, the program will simply close.
 
-divaAutoBackup or DivaAB or DAB (hahah) or whatever you want to call it is a alternative launcher
-(EXE file) for the PC game 'Hatsune Miku: Project DIVA MegaMix+'.
+# Ok, cool, where do I download it?
 
-The game natively supports Steam cloud save, but, if you add lots mods to the game, for example, 
-a bunch of song packs and module packs, the cloud save function will stop working, and the modloader
-will create it's own offline save file, on a separate folder inside %AppData%\Roaming.
+1. Go to the releases tab and download the latest .zip file according to your operating system;
+2. Extract the zip file anywhere you want and create a shortcut to the executable somewhere;
+   - *Adding it as a Steam game is recommended*
+3. Launch your new shortcut or the executable directly as if you were launching Project Diva;
+4. Enjoy :3
 
-I format my PC a lot, and 3 or 4 times now I completely lost my progress in the game because it was
-using this offline save due to mods, and I forgot to back it up, so I made this.
+# Windows Defender says it's a virus
+Windows defender is stupid. Use linux.
 
-The .exe file was made using the ps2exe powershell module.
+# I'd like to manually build it myself.
+Why? Ok...
 
-**How does it work?**
+1. Install Python;
+2. Install the dependencies at *requirements.txt*;
+3. Open a terminal on the project directory;
+4. Run the command *python build.py* and wait for it to build;
+5. Your final build will be located at the *dist* folder;
+6. Enjoy? I guess.
 
-The script uses steam to launch the game through it's AppID, once the game is launched, the program
-will check if it is still running every second. If it is, it does nothing, if you close the game
-and it detects that it's closed, it creates a backup of your save inside your Documents folder in a
-folder called "DivaBackups". If you have some sort of cloud backup going on like GoogleDrive or
-OneDrive, it's gonna pick it up and cloud save it for you, problem solved (i hope).
-
-**How do I use it?**
-
-Download the latest .exe file from releases, place it wherever you want and run it.
+# What's that masterpiece blessing my eyes?
+That beautiful piece of artwork was the prototype banner before I sunk about 3 minutes of my life making the final one.

@@ -1,0 +1,14 @@
+app_id: 1761390
+appdata_dml_path: AppData/Roaming/DIVA/Project DIVA MEGA39's
+appdata_edn_path: AppData/Roaming/EDEN/Project DIVA MEGA39's
+appdata_std_path: AppData/Roaming/SEGA/Project DIVA MEGA39's
+backup_path: /home/Rin/DivaAutoBackup
+eden_project: false
+exec_name: DivaMegaMix.exe
+first_time_experience: true
+linux_steam_library_paths:
+- ~/.steam/steam
+- ~/.local/share/Steam
+- ~/.var/app/com.valvesoftware.Steam/.steam/steam
+- ~/.var/app/com.valvesoftware.Steam/.local/share/Steam
+steam_path: C:/Program Files (x86)/Steam
